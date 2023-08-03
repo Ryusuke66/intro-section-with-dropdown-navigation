@@ -9,6 +9,8 @@ body {
     font-size: 18px;
     min-height: 100vh;
     color: hsl(0, 0%, 41%);
+    display: flex;
+    flex-direction: column; 
 }
 
 ul {
@@ -205,10 +207,12 @@ nav {
 /* Main Start */
 
 main {
-    padding: 30px 170px;
+    padding: 100px 170px;
     display: grid;
     grid-template-columns: 56% 44%;
     align-items: end;
+    flex: 1 1 auto;
+
 }
 
 main .left {
@@ -257,7 +261,9 @@ main img {
 }
 
 main .right {
-    display: none;
+    background: url("images/image-hero-desktop.png") no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 /* Main End */
@@ -271,10 +277,16 @@ main .right {
     align-items: center;
     justify-content: center;
     width: 100%;
+    background: hsl(0, 0%, 98%);
+    transition: .2s;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+body:hover .attribution, .attribution:hover {
+    bottom: 0;
 }
 
 @media (max-width: 1200px) {
@@ -316,7 +328,7 @@ main .right {
 
     main {
         padding: 30px 100px;
-        align-items: center;
+        flex: 0 0 auto;
     }
 
     main h1 {
@@ -336,6 +348,7 @@ main .right {
 
     body {
         font-size: 16px;
+        display: block;
     }
 
     header {
@@ -434,10 +447,6 @@ main .right {
         padding: 0;
     }
 
-    main > img {
-        display: none;
-    }
-
     main button {
         margin-bottom: 50px;
     }
@@ -452,5 +461,9 @@ main .right {
         background-size: cover;
         height: 300px;
         width: 100%;
+    }
+
+    .attribution {
+        display: none;
     }
 }
