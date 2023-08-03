@@ -262,7 +262,8 @@ main img {
 
 main .right {
     background: url("images/image-hero-desktop.png") no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     height: 100%;
 }
 
@@ -458,7 +459,8 @@ body:hover .attribution, .attribution:hover {
     main .right {
         display: block;
         background: url("images/image-hero-mobile.png") no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
         height: 300px;
         width: 100%;
     }
